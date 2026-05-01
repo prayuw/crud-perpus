@@ -30,9 +30,9 @@ $data = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-<h2>📖 Detail Peminjaman</h2>
+<h1>Detail Peminjaman</h1>
 
-<a href="../peminjaman/list.php" class="btn">← Kembali ke Peminjaman</a>
+<a href="../peminjaman/list.php" class="btn"> Kembali ke Peminjaman</a>
 
 <table>
 <tr>
@@ -60,6 +60,10 @@ $data = $query->fetchAll(PDO::FETCH_ASSOC);
 <?php endforeach; ?>
 
 </table>
+
+<div class="button-group">
+    <a href="../dashboard.php" class="btn btn-dashboard">Kembali ke Dashboard</a>
+</div>
 
 </body>
 </html>

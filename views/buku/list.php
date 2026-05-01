@@ -15,12 +15,13 @@ $data = $buku->all();
 </head>
 <body>
 
-<h2>📚 Data Buku</h2>
+<h1>Data Buku</h1>
 
 <a href="tambah.php" class="btn">+ Tambah Buku</a>
 
 <table>
 <tr>
+    <th>Gambar</th>
     <th>Judul</th>
     <th>Penulis</th>
     <th>Penerbit</th>
@@ -31,6 +32,13 @@ $data = $buku->all();
 
 <?php foreach($data as $row): ?>
 <tr>
+    <td>
+        <?php if (!empty($row['gambar'])): ?>
+            <img src="../../<?= $row['gambar'] ?>" width="70">
+        <?php else: ?>
+            <span>Tidak ada</span>
+        <?php endif; ?>
+    </td>
     <td><?= $row['judul'] ?></td>
     <td><?= $row['penulis'] ?></td>
     <td><?= $row['penerbit'] ?></td>
@@ -41,9 +49,14 @@ $data = $buku->all();
         <a href="../../controllers/BukuController.php?hapus=<?= $row['id_buku'] ?>" class="hapus" onclick="return confirm('Yakin hapus?')">Hapus</a>
     </td>
 </tr>
+
 <?php endforeach; ?>
 
 </table>
+
+<div class="button-group">
+    <a href="../dashboard.php" class="btn btn-dashboard">Kembali ke Dashboard</a>
+</div>
 
 </body>
 </html>

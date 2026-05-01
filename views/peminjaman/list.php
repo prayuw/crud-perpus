@@ -24,7 +24,7 @@ $data = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-<h2>📖 Data Peminjaman</h2>
+<h1>Data Peminjaman</h1>
 
 <a href="tambah.php" class="btn">+ Pinjam Buku</a>
 
@@ -57,6 +57,10 @@ $data = $query->fetchAll(PDO::FETCH_ASSOC);
 <?php endforeach; ?>
 
 </table>
+
+<div class="button-group">
+    <a href="../dashboard.php" class="btn btn-dashboard">Kembali ke Dashboard</a>
+</div>
 
 </body>
 </html>

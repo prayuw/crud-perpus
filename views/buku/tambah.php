@@ -8,8 +8,9 @@
 
 <h2>Tambah Buku</h2>
 
-<form method="POST" action="../../controllers/BukuController.php">
+<form method="POST" action="../../controllers/BukuController.php" enctype="multipart/form-data">
 
+<input type="file" name="gambar">
 <input type="text" name="judul" placeholder="Judul Buku" required>
 <input type="text" name="penulis" placeholder="Penulis" required>
 <input type="text" name="penerbit" placeholder="Penerbit" required>

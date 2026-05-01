@@ -50,7 +50,7 @@ $total_kembali = $db->query("SELECT COUNT(*) FROM peminjaman WHERE status='kemba
     <a href="buku/list.php">Kelola Buku</a>
     <a href="anggota/list.php">Kelola Anggota</a>
     <a href="peminjaman/list.php">Peminjaman</a>
-    <a href="detail_peminjaman/list.php">Detail</a>
+    <a href="detail_peminjaman/list.php">Detail Peminjaman Buku</a>
 </div>
 
 </body>

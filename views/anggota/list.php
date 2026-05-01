@@ -15,7 +15,7 @@ $data = $anggota->all();
 </head>
 <body>
 
-<h2>👤 Data Anggota</h2>
+<h1>Data Anggota</h1>
 
 <a href="tambah.php" class="btn">+ Tambah Anggota</a>
 
@@ -44,6 +44,10 @@ $data = $anggota->all();
 <?php endforeach; ?>
 
 </table>
+
+<div class="button-group">
+    <a href="../dashboard.php" class="btn btn-dashboard">Kembali ke Dashboard</a>
+</div>
 
 </body>
 </html>

@@ -17,12 +17,13 @@ $data = $query->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-<h2>✏️ Edit Buku</h2>
+<h2>Edit Buku</h2>
 
-<form method="POST" action="../../controllers/BukuController.php">
+<form method="POST" action="../../controllers/BukuController.php" enctype="multipart/form-data">
 
 <input type="hidden" name="id" value="<?= $data['id_buku'] ?>">
 
+<input type="file" name="gambar">
 <input type="text" name="judul" value="<?= $data['judul'] ?>" required>
 <input type="text" name="penulis" value="<?= $data['penulis'] ?>" required>
 <input type="text" name="penerbit" value="<?= $data['penerbit'] ?>" required>
